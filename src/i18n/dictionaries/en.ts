@@ -1,0 +1,183 @@
+/**
+ * UI dictionary — strings that are not part of the content model
+ * (src/content), i.e. navigation, labels, CTAs, form copy, empty states.
+ * `ar.ts` must mirror this shape exactly; `Dictionary` is inferred from it.
+ */
+export const en = {
+  a11y: {
+    skipToContent: "Skip to content",
+  },
+  nav: {
+    capabilities: "Capabilities",
+    projects: "Projects",
+    sectors: "Sectors",
+    engineeringNetwork: "Engineering network",
+    about: "About",
+    credentials: "Credentials",
+    discussProject: "Discuss a project",
+    requestCorporateProfile: "Request corporate profile",
+    homeAriaLabel: "ZAK Engineering Consultants — home",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    switchLanguageTo: "Switch to Arabic",
+  },
+  footer: {
+    capabilitiesHeading: "Capabilities",
+    companyHeading: "Company",
+    aboutZak: "About ZAK",
+    contact: "Contact",
+    allRightsReserved: "All rights reserved.",
+    companyProfile: "Company profile",
+  },
+  breadcrumb: {
+    home: "Home",
+  },
+  common: {
+    discussProject: "Discuss a project",
+    exploreCapability: "Explore capability",
+    viewCapabilities: "View capabilities",
+    viewCredentials: "View credentials",
+    seeProjectRecord: "See the project record",
+    howZakDelivers: "How ZAK delivers",
+    allSectors: "All sectors",
+    viewAllProjects: "View all projects",
+    browseFullRecord: "Browse the full project record",
+  },
+  project: {
+    verifiedRoleEyebrow: "ZAK scope / verified role",
+    overviewEyebrow: "Project overview",
+    dataEyebrow: "Project data",
+    partiesEyebrow: "Project parties",
+    relatedAssignmentEyebrow: "Related assignment",
+    relatedCapabilitiesEyebrow: "Related capabilities",
+    relatedProjectsEyebrow: "Related projects",
+    noImage: "No rights-cleared image for this project in the corporate profile",
+    partiesDisclaimer:
+      "Parties are listed as recorded in the ZAK corporate profile. Roles held by other organisations remain theirs; ZAK’s contribution is limited to the scope stated above.",
+    flagshipTag: "Flagship projects",
+    recordTag: "Project record",
+    ctaHeading: "Need engineering depth of this kind on your project?",
+    partyLabels: {
+      owner: "Owner",
+      contractor: "Contractor",
+      consultant: "Consultant",
+      designer: "Designer",
+      costManagement: "Cost management",
+      leedConsultant: "LEED consultant",
+    },
+  },
+  projectBrowser: {
+    tierFlagship: "Flagship",
+    tierSelected: "Selected",
+    tierExtended: "Extended experience",
+    allProjects: "All projects",
+    filterAriaLabel: "Filter projects by sector",
+    showingCount: (visible: number, total: number) =>
+      `Showing ${visible} of ${total} projects`,
+    moreCount: (n: number) => `+ ${n} more`,
+    projectCount: (n: number) => (n === 1 ? "1 project" : `${n} projects`),
+    /** Word only (no digit) — pairs with a separately rendered numeral. */
+    projectWord: (n: number): string => (n === 1 ? "project" : "projects"),
+  },
+  capability: {
+    indexEyebrow: (index: string) => `Capability ${index}`,
+    clientProblemEyebrow: "The client problem",
+    providesEyebrow: "What ZAK provides",
+    scopeBoundaryEyebrow: "Scope boundary",
+    scopeBoundaryBody: "Stated plainly so authorship and responsibility are never assumed.",
+    scopeStartsHeading: "Where ZAK’s role starts",
+    scopeEndsHeading: "Where ZAK’s role ends",
+    deliverablesEyebrow: "Key deliverables",
+    evidenceEyebrow: "Project evidence",
+    evidenceHeading: "Where this capability has been delivered",
+    evidenceLabel: "Evidence",
+    ctaHeading: (shortName: string) => `Discuss ${shortName.toLowerCase()} on your project`,
+  },
+  sector: {
+    priorityTag: "Priority sector",
+    relevantCapability: "Relevant capability",
+    ctaHeading: "Discuss a project in your sector",
+  },
+  credentials: {
+    heading: "Corporate credentials and documentary evidence",
+    lead: "Certificates, client correspondence and official records are retained as source evidence, with status stated outside the original documents.",
+    sectionTag: "06 / Credentials",
+    corporateInfoEyebrow: "Corporate information",
+    legalEntity: "Legal entity",
+    office: "Office",
+    telephone: "Telephone",
+    certificatesEyebrow: "Management-system certificates",
+    certificateRegister: "Certificate register",
+    historicalExpiry: (date: string) => `Historical · source expiry ${date}`,
+    officialRecordsEyebrow: "Official records",
+    officialRecordsHeading: "Registrations and licences held",
+    officialRecordsBody:
+      "The following records are retained in the corporate profile as unaltered source documents. Full registration numbers are provided with a prequalification pack.",
+    ctaHeading: "Preparing a tender or prequalification?",
+    requestPrequalificationPack: "Request prequalification pack",
+  },
+  about: {
+    sectionTag: "01 / Company",
+    whoWeAreEyebrow: "Who we are",
+    builtEnvironmentCaption: "Built environment / selected project experience",
+    theRecordEyebrow: "The record",
+    documentedProjects: "Documented projects",
+    sectorsRepresented: "Sectors represented",
+    capabilityFamilies: "Capability families",
+    recordDisclaimer: (edition: string) =>
+      `Counts refer to the project record published in ZAK’s corporate profile (${edition}).`,
+    governanceEyebrow: "Governance",
+    corporateRecordsHeading: "Corporate records",
+    corporateRecordsBody:
+      "Commercial registration, engineering-office and professional investment licences, chamber membership and management-system certificates are retained as documentary evidence.",
+    ctaHeading: "Bring ZAK into the delivery team",
+  },
+  contact: {
+    eyebrow: "Contact",
+    heading: "Discuss a project",
+    lead: "A direct next step for project, technical and prequalification enquiries.",
+    projectEnquiriesLabel: "Project enquiries",
+    projectEnquiriesBody:
+      "Engineering consultancy, technical coordination and prequalification enquiries.",
+  },
+  form: {
+    name: "Name",
+    company: "Company",
+    workEmail: "Work email",
+    phone: "Phone",
+    opportunity: "Project or opportunity",
+    projectLocation: "Project location",
+    requiredCapability: "Required capability",
+    selectCapability: "Select a capability",
+    notSureYet: "Not sure yet",
+    projectStage: "Project stage",
+    selectStage: "Select a stage",
+    stageOptions: [
+      "Concept / feasibility",
+      "Design development",
+      "Tender / procurement",
+      "Under construction",
+      "Existing asset / assessment",
+    ],
+    message: "Message",
+    documentRequests: "Document requests",
+    requestCorporateProfile: "Request corporate profile",
+    requestPrequalification: "Request prequalification information",
+    submit: "Submit project enquiry",
+    sending: "Sending…",
+    validation: {
+      requiredFields: "Please complete name, company and message.",
+      invalidEmail: "Please enter a valid work email address.",
+      deliveryFailed:
+        "Your enquiry could not be sent. Please try again, or call the Jeddah office.",
+      success:
+        "Thank you — your enquiry has been received and will be routed to the engineering team.",
+      honeypotSuccess: "Thank you — your enquiry has been received.",
+    },
+  },
+  metadata: {
+    homeTitle: (name: string, positioning: string) => `${name} — ${positioning}`,
+  },
+};
+
+export type Dictionary = typeof en;
